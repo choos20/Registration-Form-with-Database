@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Styled Registration Form</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <form id="registrationForm" action="submit.php" method="POST" autocomplete="on">
+    <h2>Registration Form</h2>
+
+    <label for="firstName">First Name</label>
+    <input type="text" id="firstName" name="firstName" autocomplete="given-name" required />
+
+    <label for="lastName">Last Name</label>
+    <input type="text" id="lastName" name="lastName" autocomplete="family-name" required />
+
+    <label for="email">Email Address</label>
+    <input type="email" id="email" name="email" autocomplete="email" required />
+
+    <label for="contact">Contact No.</label>
+    <input type="tel" id="contact" name="contact" autocomplete="tel" placeholder="e.g. 09947610655 or +639947610655" />
+
+    <label for="password">Password</label>
+    <input type="password" id="password" name="password" autocomplete="new-password" required />
+
+    <label>Gender</label>
+    <div class="gender-options">
+      <label for="genderMale"><input type="radio" id="genderMale" name="gender" value="Male" autocomplete="sex" required /> Male</label>
+      <label for="genderFemale"><input type="radio" id="genderFemale" name="gender" value="Female" autocomplete="sex" required /> Female</label>
+    </div>
+
+    <label for="birthdate">Birthdate</label>
+    <input type="date" id="birthdate" name="birthdate" autocomplete="bday" required />
+
+    <label for="country">Country</label>
+    <select id="country" name="country" autocomplete="country" required>
+      <option value="">Select Country</option>
+    </select>
+
+    <div id="contact-error"></div>
+
+    <div class="terms">
+      <input type="checkbox" id="terms" name="terms" required />
+      <label for="terms">I agree to the Terms and Conditions</label>
+    </div>
+
+    <button type="submit">Submit</button>
+  </form>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
